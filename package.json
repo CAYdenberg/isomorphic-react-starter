@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "compile": "babel -d server/ src/components/**/*.js",
+    "compile": "babel -d server/ src/components/**/*.js src/entry-server.js",
     "build": "parcel build src/entry-client.js --out-file main.js --out-dir dist",
     "dev": "NODE_ENV=development node index.js",
     "start": "npm run compile && npm run dev"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/CAYdenberg/isomorphic-react-starter#readme",
   "dependencies": {
+    "bulma": "^0.7.2",
     "express": "^4.16.4",
     "express-hbs": "^2.0.0",
     "react": "^16.7.0",

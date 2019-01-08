@@ -3,8 +3,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('express-hbs')
 const Bundler = require('parcel-bundler')
-const ReactEntry = require('./server/src/components').default
-const ReactRender = require('react-dom/server').renderToString
+const render = require('./server/src/entry-server').default
 
 const app = express()
 
@@ -25,8 +24,9 @@ app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'views'))
 
 app.all('*', (req, res) => {
-  const reactHtml = ReactRender(ReactEntry())
-  res.render('base', {reactHtml})
+  render(req).then(({html, state}) => {
+    res.render('base', {html, state: JSON.stringify(state)})
+  })
 })
 
 app.listen(3000)
