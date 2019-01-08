@@ -22,6 +22,7 @@
   "homepage": "https://github.com/CAYdenberg/isomorphic-react-starter#readme",
   "dependencies": {
     "bulma": "^0.7.2",
+    "email-validator": "^2.0.4",
     "express": "^4.16.4",
     "express-hbs": "^2.0.0",
     "react": "^16.7.0",
