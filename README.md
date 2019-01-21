@@ -18,5 +18,6 @@ Requires Node (>=8) and npm (>= 6)
 
 1. npm i
 
-1. npm run dev
+1. npm start
 
+1. Visit localhost:3000 in your browser
