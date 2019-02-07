@@ -26,7 +26,8 @@
     "express": "^4.16.4",
     "express-hbs": "^2.0.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "xss-filters": "^1.2.7"
   },
   "devDependencies": {
     "babel": "^6.23.0",
